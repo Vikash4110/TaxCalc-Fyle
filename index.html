@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Tax Calculator</h1>
+      <form id="taxForm">
+        <div class="input-group">
+          <label for="grossIncome">Enter Gross Annual Income:</label>
+          <div class="input-wrapper">
+            <input type="number" id="grossIncome" name="grossIncome" required>
+            <span class="error-icon" id="grossIncomeError" title="Please enter a valid number!">!</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="extraIncome">Enter Extra Income:</label>
+          <div class="input-wrapper">
+            <input type="number" id="extraIncome" name="extraIncome" required>
+            <span class="error-icon" id="extraIncomeError" title="Please enter a valid number!">!</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="ageGroup">Enter Age Group:</label>
+          <div class="input-wrapper">
+            <select id="ageGroup" name="ageGroup" required>
+              <option value="">Select Age Group</option>
+              <option value="<40">&lt;40</option>
+              <option value="≥40 &lt;60">≥40 &lt;60</option>
+              <option value="≥60">≥60</option>
+            </select>
+            <span class="error-icon" id="ageGroupError" title="Please select an age group!">!</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="deductions">Enter Total Applicable Deductions:</label>
+          <div class="input-wrapper">
+            <input type="number" id="deductions" name="deductions" required>
+            <span class="error-icon" id="deductionsError" title="Please enter a valid number!">!</span>
+          </div>
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
